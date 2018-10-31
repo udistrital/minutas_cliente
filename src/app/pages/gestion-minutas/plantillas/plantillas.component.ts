@@ -11,13 +11,7 @@ import Swal from 'sweetalert2';
 import { ToasterService, ToasterConfig, Toast, BodyOutputType } from 'angular2-toaster';
 import 'style-loader!angular2-toaster/toaster.css';
 import * as jspdf from 'jspdf';
-//import * as html2canvas from 'html2canvas';
 
-
-
-
-
-//window['CKEDITOR_BASEPATH'] = '//cdn.ckeditor.com/4.6.2/full-all/';
 
 
 @Component({
@@ -53,22 +47,22 @@ export class PlantillasComponent {
   constructor(
     private contratoService: ContratoService,
     private minutasArgoService: MinutasArgoService,
-    private toasterService: ToasterService
+    private toasterService: ToasterService,
   ) {
 
     this.dependencias_res = [
       {
         nombre: 'Sección de Compras',
-        id: 'Compras'
+        id: 'Compras',
       },
       {
         nombre: 'IDEXUD',
-        id: 'Idexud'
+        id: 'Idexud',
       },
       {
         nombre: 'Oficina Asesora Jurídica',
-        id: 'Juridica'
-      }
+        id: 'Juridica',
+      },
     ];
 
     this.crear = false;
@@ -183,29 +177,12 @@ export class PlantillasComponent {
   generar_pdf(html: string) {
 
 
-    var data = document.getElementById('contentToConvert');
-    let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
-    var position = 0;
+    let data = document.getElementById('contentToConvert');
+    let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF
     pdf.addHTML(data, function () {
       pdf.save('web.pdf');
     });
 
-    /* html2canvas(data).then(canvas => {  
-       // Few necessary setting options  
-       var imgWidth = 208;   
-       var pageHeight = 295;    
-       var imgHeight = canvas.height * imgWidth / canvas.width;  
-       var heightLeft = imgHeight;  
-   
-       //const contentDataURL = canvas.toDataURL('image/png')  
-       let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
-       var position = 0;  
-       pdf.addHTML(html,function() {
-         pdf.save('web.pdf');
-     });
-       //pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
-       //pdf.save('MYPdf.pdf'); // Generated PDF   
-     });  */
   }
 
 }

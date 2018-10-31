@@ -11,12 +11,12 @@ const routes: Routes = [{
     children: [{
         path: 'plantillas',
         component: PlantillasComponent,
-      }, ],
-  }];
+    }],
+}];
 
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],
-  })
-  export class GestionMinutasRoutingModule { }
+})
+export class GestionMinutasRoutingModule { }

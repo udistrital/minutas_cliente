@@ -25,7 +25,7 @@ const components = [
     GestionMinutasRoutingModule,
     CKEditorModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
   ],
   declarations: [
     ...components,
@@ -35,7 +35,7 @@ const components = [
     MinutasArgoService,
   ],
   entryComponents: [
-    PlantillasComponent  
+    PlantillasComponent,
   ],
 })
 export class GestionMinutasModule { }
