@@ -4,5 +4,4 @@ export class TipoContrato {
     TipoContrato: string;
     IdGrupoTipoContrato: number;
     Estado: boolean;
-  }
-  
+}

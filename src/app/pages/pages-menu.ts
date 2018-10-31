@@ -247,7 +247,7 @@ export const MENU_ITEMS: MenuItem[] = [
         title: 'Plantillas',
         link: '/pages/gestion-minutas/plantillas',
         key: 'plantillas',
-      }
+      },
     ],
   },
   {

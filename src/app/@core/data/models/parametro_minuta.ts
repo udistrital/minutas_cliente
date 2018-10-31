@@ -1,10 +1,9 @@
- 
- export class ParametroMinuta {
+
+export class ParametroMinuta {
     Id: number;
     Nombre: string;
     Descripcion: string;
     CodigoAbreviacion: string;
     Activo: boolean;
     NumeroOrden: number;
-  }
- 
+}
