@@ -1,0 +1,126 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>Dependencia Responsable</nb-card-header>
+      <nb-card-body>
+        <div class="form-group">
+          <!-- <label>Simple Select</label> -->
+          <select class="form-control" [(ngModel)]="dependencia_solicitante" (ngModelChange)="get_tipo_contrato_dependencia(dependencia_solicitante)">
+            <option [value]="dependencia.id" *ngFor="let dependencia of dependencias_res">{{dependencia.nombre}}</option>
+          </select>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-6">
+    <nb-card>
+      <nb-card-header>
+        Editar Plantillas
+      </nb-card-header>
+
+      <nb-card-body>
+        <ckeditor *ngIf="plantilla_minuta" [(ngModel)]="plantilla_minuta.Plantilla" [config]="{ extraPlugins: 'divarea', height: '320' }"></ckeditor>
+      </nb-card-body>
+    </nb-card>
+  </div>
+
+  <div class="col-md-6">
+    <nb-card>
+      <nb-card-header>Tipo Contrato</nb-card-header>
+      <nb-card-body>
+        <div class="form-group" *ngIf="tipos_contrato">
+          <!-- <label>Simple Select</label> -->
+          <select class="form-control" [(ngModel)]="tipo_contrato" (ngModelChange)="get_plantilla(tipo_contrato.IdTipoContrato, tipo_contrato.TipoPlantilla)">
+            <option [ngValue]="tipo" *ngFor="let tipo of tipos_contrato.DependenciaTipoContrato.TipoContratos">{{tipo.Nombre}}</option>
+          </select>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <nb-card>
+      <nb-card-header>Acciones</nb-card-header>
+      <nb-card-body>
+        <div class="row">
+          <div class="container-btn col-md-4">
+            <button class="btn btn-success" *ngIf="plantilla_minuta" (click)="crear=true;">Crear nueva</button>
+          </div>
+
+          <div class="container-btn col-md-4">
+            <button class="btn btn-warning" *ngIf="plantilla_minuta" (click)="update_plantilla_minuta(plantilla_minuta)">Guardar
+              Cambios</button>
+          </div>
+
+          <div class="container-btn col-md-4">
+            <button class="btn btn-info" *ngIf="plantilla_minuta" (click)="generar_pdf(plantilla_minuta.Plantilla)">Visualizar</button>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card *ngIf="crear">
+      <nb-card-header>Fecha Vigencia</nb-card-header>
+      <nb-card-body>
+        <div class="row">
+
+          <mat-form-field class="col-md-4">
+            <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha" [(ngModel)]="plantilla_minuta.FechaVigencia">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+
+          <div class="container-btn col-md-4">
+            <button class="btn btn-success"  (click)="create_plantilla_minuta(plantilla_minuta)">Enviar</button>
+          </div>
+
+        </div>
+      </nb-card-body>
+    </nb-card>
+
+  </div>
+
+  <div class="col-md-6">
+    <nb-card>
+      <nb-card-header>Parámetros</nb-card-header>
+
+
+      <nb-card-body>
+
+        <div class="form-group" *ngIf="tipos_contrato">
+          <!-- <label>Simple Select</label> -->
+          <input class="form-control" [(ngModel)]="texto_filtro">
+        </div>
+
+        <div class="row" *ngFor="let parametro of parametro_minuta_tipo_contrato | filter: texto_filtro : 'ParametroMinuta' : 'Nombre'">
+
+
+          <nb-card class="col-md-12">
+            <nb-card-header>{{parametro.ParametroMinuta.Nombre}} ({{parametro.ParametroMinuta.CodigoAbreviacion}})</nb-card-header>
+
+
+            <nb-card-body>
+              {{parametro.ParametroMinuta.Descripcion}}
+
+            </nb-card-body>
+
+          </nb-card>
+        </div>
+
+      </nb-card-body>
+
+    </nb-card>
+
+  </div>
+
+  <div id="contentToConvert">
+
+  </div>
+</div>
