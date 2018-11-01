@@ -12,8 +12,6 @@ import { ToasterService, ToasterConfig, Toast, BodyOutputType } from 'angular2-t
 import 'style-loader!angular2-toaster/toaster.css';
 import * as jspdf from 'jspdf';
 
-
-
 @Component({
   selector: 'ngx-grid',
   styleUrls: ['./plantillas.component.scss'],
@@ -22,7 +20,6 @@ import * as jspdf from 'jspdf';
     // The locale would typically be provided on the root module of your application. We do it at
     // the component level here, due to limitations of our example generation script.
     { provide: MAT_DATE_LOCALE, useValue: 'es-CO' },
-
     // `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
     // `MatMomentDateModule` in your applications root module. We provide it at the component level
     // here, due to limitations of our example generation script.
@@ -42,7 +39,6 @@ export class PlantillasComponent {
   crear: boolean;
   config: ToasterConfig;
   info_plantilla: PlantillaMinuta;
-
 
   constructor(
     private contratoService: ContratoService,
@@ -64,7 +60,6 @@ export class PlantillasComponent {
         id: 'Juridica',
       },
     ];
-
     this.crear = false;
   }
 
@@ -74,11 +69,8 @@ export class PlantillasComponent {
       .subscribe(res => {
         if (res !== null) {
           this.tipos_contrato = res;
-
         }
       });
-
-
   }
 
   get_plantilla(tipo_contrato: number, tipo_plantilla: string): void {
@@ -90,8 +82,6 @@ export class PlantillasComponent {
           this.get_parametro_minuta_tipo_contrato(tipo_contrato);
         }
       });
-
-
   }
 
   get_parametro_minuta_tipo_contrato(tipo_contrato: number): void {
@@ -100,13 +90,11 @@ export class PlantillasComponent {
       .subscribe(res => {
         if (res !== null) {
           this.parametro_minuta_tipo_contrato = <ParametroMinutaTipoContrato>res;
-
         }
       });
   }
 
   update_plantilla_minuta(plantilla: any): void {
-
     const opt: any = {
       title: 'Update?',
       text: 'Update Plantilla!',
@@ -173,16 +161,12 @@ export class PlantillasComponent {
     this.toasterService.popAsync(toast);
   }
 
-
   generar_pdf(html: string) {
-
-
-    let data = document.getElementById('contentToConvert');
-    let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF
+    const data = document.getElementById('contentToConvert');
+    const pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF
     pdf.addHTML(data, function () {
       pdf.save('web.pdf');
     });
-
   }
 
 }
