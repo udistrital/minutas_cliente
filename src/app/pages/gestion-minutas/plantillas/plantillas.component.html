@@ -59,7 +59,7 @@
           </div>
 
           <div class="container-btn col-md-4">
-            <button class="btn btn-info" *ngIf="plantilla_minuta" (click)="generar_pdf(plantilla_minuta.Plantilla)">Visualizar</button>
+            <button class="btn btn-info" *ngIf="plantilla_minuta" (click)="generar_pdf()">Visualizar</button>
           </div>
         </div>
       </nb-card-body>
@@ -78,7 +78,7 @@
 
 
           <div class="container-btn col-md-4">
-            <button class="btn btn-success"  (click)="create_plantilla_minuta(plantilla_minuta)">Enviar</button>
+            <button class="btn btn-success" (click)="create_plantilla_minuta(plantilla_minuta)">Enviar</button>
           </div>
 
         </div>
@@ -120,7 +120,10 @@
 
   </div>
 
-  <div id="contentToConvert">
+  <!-- <div *ngIf="plantilla_minuta"   [innerHTML]="plantilla_minuta.Estilo">  -->
+    <div style="opacity: 0.01">
+  <div  id="conversion"  #data>
 
   </div>
+</div>
 </div>

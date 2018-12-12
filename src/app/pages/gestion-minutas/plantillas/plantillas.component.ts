@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import './ckeditor.loader';
 import 'ckeditor';
 import { MinutasArgoService } from '../../../@core/data/minutas_argo.service';
@@ -11,6 +11,8 @@ import Swal from 'sweetalert2';
 import { ToasterService, ToasterConfig, Toast, BodyOutputType } from 'angular2-toaster';
 import 'style-loader!angular2-toaster/toaster.css';
 import * as jspdf from 'jspdf';
+import * as html2canvas from 'html2canvas';
+import * as $ from 'jquery'
 
 @Component({
   selector: 'ngx-grid',
@@ -160,13 +162,38 @@ export class PlantillasComponent {
     };
     this.toasterService.popAsync(toast);
   }
+  @ViewChild('data') data: ElementRef;
 
-  generar_pdf(html: string) {
-    const data = document.getElementById('contentToConvert');
-    const pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF
-    pdf.addHTML(data, function () {
-      pdf.save('web.pdf');
-    });
+  generar_pdf() {
+    $('#conversion').text('');
+    $('#conversion').append(this.plantilla_minuta.Estilo);
+    $('#conversion').append(this.plantilla_minuta.Plantilla);
+
+    let specialElementHandlers ={
+
+      '#editor': function(element, renderer){
+        return true;
+      }
+
+    };
+
+    const data = this.data.nativeElement;
+
+ html2canvas(data).then(canvas => {  
+  // Few necessary setting options  
+  var imgWidth = 208;   
+  var pageHeight = 295;    
+  var imgHeight = canvas.height* imgWidth / canvas.width;  
+  var heightLeft = imgHeight;  
+
+  const contentDataURL = canvas.toDataURL('image/png')  
+  let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
+  var position = 1;  
+  pdf.addImage(contentDataURL, 'PNG', 1, position, imgWidth, imgHeight)  
+  pdf.save('plantilla.pdf'); // Generated PDF   
+  $('#conversion').text('');
+
+});  
   }
 
 }
