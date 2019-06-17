@@ -7,97 +7,9 @@
   },
   "MENU": {
     "dashboard": "Inicio",
-    "parametricas": {
-      "parametricas": "Tablas parametricas",
-      "genero": "Género",
-      "grupo_etnico": "Grupo étnico",
-      "estado_civil": "Estado civil",
-      "tipo_discapacidad": "Tipo de discapacidad",
-      "tipo_lugar": "Tipo de lugar",
-      "tipo_contacto": "Tipo de contacto",
-      "enfasis": "Enfasis",
-      "programa_academico": "Programas academicos",
-      "metodologia": "Metodologias",
-      "nivel_formacion": "Niveles de formacion",
-      "titulacion": "Titulaciones",
-      "linea_investigacion": "Lineas de investigacion",
-      "estado_admision": "Estados admision"
-    },
-    "admision": {
-      "admision": "Admisiones"
-    },
-    "genero": {
-      "genero": "Género",
-      "lista_genero": "Listado de género",
-      "crud_genero": "Crud de género"
-    },
-    "grupo_etnico": {
-      "grupo_etnico": "Grupo étnico",
-      "lista_grupo_etnico": "Lista de grupo étnico",
-      "crud_grupo_etnico": "Crud de grupo étnico"
-    },
-    "persona": {
-      "persona": "Persona",
-      "lista_persona": "Listado de persona",
-      "crud_persona": "Crud de persona"
-    },
     "gestion-minutas": {
       "gestion-minutas": "Gestion Minutas",
       "plantillas": "Plantillas"
-    },
-    "info_caracteristica": {
-      "info_caracteristica": "Información característica",
-      "lista_info_caracteristica": "lista de información característica",
-      "crud_info_caracteristica": "Crud de información característica"
-    },
-    "tipo_lugar": {
-      "tipo_lugar": "Tipo de lugar",
-      "lista_tipo_lugar": "Listado de tipo de lugar",
-      "crud_tipo_lugar": "Crud de tipo de lugar"
-    },
-    "lugar": {
-      "lugar": "Lugar",
-      "lista_lugar": "Listado de lugar",
-      "crud_lugar": "Crud de lugar"
-    },
-    "lugar_ubicacion": {
-      "lugar_ubicacion": "Ubicación de lugar",
-      "lista_lugar_ubicacion": "Listado de ubicación de lugar",
-      "crud_lugar_ubicacion": "Crud de ubicación de lugar"
-    },
-    "tipo_contacto": {
-      "tipo_contacto": "Tipo de contacto",
-      "lista_tipo_contacto": "Listado de tipo de contacto",
-      "crud_tipo_contacto": "Crud de tipo de contacto"
-    },
-    "informacion_contacto": {
-      "informacion_contacto": "Información de contacto",
-      "lista_informacion_contacto": "Listado de información de contacto",
-      "crud_informacion_contacto": "Crud de información de contacto"
-    },
-    "inscripcion": {
-      "inscripcion": "Inscripción",
-      "inscripcion_posgrado": "Posgrado"
-    },
-    "formacion_academica": {
-      "formacion_academica": "Formación académica",
-      "lista_formacion_academica": "Listado de formación académica",
-      "crud_formacion_academica": "Crud de formación académica"
-    },
-    "idiomas": {
-      "idiomas": "Idiomas",
-      "lista_idiomas": "Listado de idiomas",
-      "crud_idiomas": "Crud de idiomas"
-    },
-    "publicaciones": {
-      "publicaciones": "Publicaciones",
-      "lista_publicaciones": "Listado de publicaciones",
-      "crud_publicaciones": "Crud de publicaciones"
-    },
-    "experiencica_laboral": {
-      "experiencica_laboral": "Experiencia laboral",
-      "lista_experiencica_laboral": "Listado de experiencia laboral",
-      "crud_experiencica_laboral": "Crud de experiencia laboral"
     },
     "auth": {
       "auth": "Autenticación",
