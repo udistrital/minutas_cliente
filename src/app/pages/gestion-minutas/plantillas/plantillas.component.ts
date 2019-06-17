@@ -77,7 +77,8 @@ export class PlantillasComponent {
 
   get_plantilla(tipo_contrato: number, tipo_plantilla: string): void {
 
-    this.minutasArgoService.get('plantilla_minuta/?query=TipoContrato.Id:' + tipo_contrato + ',TipoPlantilla:' + tipo_plantilla + '&sortby=FechaVigencia&order=desc&limit=1')
+    this.minutasArgoService
+    .get('plantilla_minuta/?query=TipoContrato.Id:' + tipo_contrato + ',TipoPlantilla:' + tipo_plantilla + '&sortby=FechaVigencia&order=desc&limit=1')
       .subscribe(res => {
         if (res !== null) {
           this.plantilla_minuta = <PlantillaMinuta>res[0];
@@ -179,21 +180,21 @@ export class PlantillasComponent {
 
     const data = this.data.nativeElement;
 
- html2canvas(data).then(canvas => {  
-  // Few necessary setting options  
-  var imgWidth = 208;   
-  var pageHeight = 295;    
-  var imgHeight = canvas.height* imgWidth / canvas.width;  
-  var heightLeft = imgHeight;  
+ html2canvas(data).then(canvas => {
+  // Few necessary setting options
+  const imgWidth = 208;
+  // const pageHeight = 295;
+  const imgHeight = canvas.height * imgWidth / canvas.width;
+  // const heightLeft = imgHeight;
 
   const contentDataURL = canvas.toDataURL('image/png')  
-  let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
-  var position = 1;  
-  pdf.addImage(contentDataURL, 'PNG', 1, position, imgWidth, imgHeight)  
-  pdf.save('plantilla.pdf'); // Generated PDF   
+  let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF
+  const position = 1;
+  pdf.addImage(contentDataURL, 'PNG', 1, position, imgWidth, imgHeight)
+  pdf.save('plantilla.pdf'); // Generated PDF
   $('#conversion').text('');
 
-});  
+});
   }
 
 }

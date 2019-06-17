@@ -36,25 +36,14 @@
       "lista_grupo_etnico": "Lista de grupo étnico",
       "crud_grupo_etnico": "Crud de grupo étnico"
     },
-    "estado_civil": {
-      "estado_civil": "Estado civil",
-      "lista_estado_civil": "Listado estado civil",
-      "crud_estado_civil": "Crud de estado civil"
-    },
-    "tipo_discapacidad": {
-      "tipo_discapacidad": "Tipo de discapacidad",
-      "lista_tipo_discapacidad": "Listado de tipo de discapacidad",
-      "crud_tipo_discapacidad": "Crud de tipo de discapacidad"
-    },
     "persona": {
       "persona": "Persona",
       "lista_persona": "Listado de persona",
       "crud_persona": "Crud de persona"
     },
-    "info_persona": {
-      "info_persona": "Información de persona",
-      "lista_info_persona": "Listado de información de persona",
-      "crud_info_persona": "Crud de información de persona"
+    "gestion-minutas": {
+      "gestion-minutas": "Gestion Minutas",
+      "plantillas": "Plantillas"
     },
     "info_caracteristica": {
       "info_caracteristica": "Información característica",
