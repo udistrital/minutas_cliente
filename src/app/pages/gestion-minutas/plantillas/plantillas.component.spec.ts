@@ -1,5 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing'; // import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 import { ThemeModule } from '../../../@theme/theme.module';
@@ -25,7 +25,7 @@ import { PlantillasComponent } from './plantillas.component';
 
 describe('PlantillasComponent', () => {
   let component: PlantillasComponent;
-  let fixture: ComponentFixture<PlantillasComponent>;
+  // let fixture: ComponentFixture<PlantillasComponent>;
   let spy: any;
   let contratoService: ContratoService;
   let minutasArgoService: MinutasArgoService;
