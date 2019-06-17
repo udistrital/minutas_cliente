@@ -5,7 +5,7 @@ import { takeWhile } from 'rxjs/operators/takeWhile';
 @Component({
   selector: 'ngx-layout-direction-switcher',
   template: `
-    <ngx-switcher
+   <!-- <ngx-switcher
       [firstValue]="directions.RTL"
       [secondValue]="directions.LTR"
       [firstValueLabel]="'RTL'"
@@ -14,7 +14,7 @@ import { takeWhile } from 'rxjs/operators/takeWhile';
       (valueChange)="toggleDirection($event)"
       [vertical]="vertical"
     >
-    </ngx-switcher>
+    </ngx-switcher> -->
   `,
 })
 export class LayoutDirectionSwitcherComponent implements OnDestroy {
