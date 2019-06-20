@@ -1,5 +1,4 @@
 
-import { TipoDocumento } from './tipo_documento';
 
 export class Documento {
     Descripcion: string;
@@ -7,5 +6,5 @@ export class Documento {
     Id: number;
     Metadatos: string;
     Nombre: string;
-    TipoDocumento: TipoDocumento;
+    TipoDocumento: number;
 }
