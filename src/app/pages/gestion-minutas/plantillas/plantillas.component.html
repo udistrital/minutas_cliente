@@ -85,7 +85,7 @@
 
       <nb-card-body>
         <!-- <ckeditor *ngIf="plantilla_minuta" [(ngModel)]="plantilla_minuta.Plantilla" [config]="{ extraPlugins: 'divarea', height: '320' }"></ckeditor> -->
-        
+        <ckeditor [editor]="Editor" data="<p>Hello, world!</p>" (ready)="onReady($event)"></ckeditor>
       </nb-card-body>
     </nb-card>
   </div>

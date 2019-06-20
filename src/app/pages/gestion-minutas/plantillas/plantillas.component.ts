@@ -13,6 +13,8 @@ import 'style-loader!angular2-toaster/toaster.css';
 import * as jspdf from 'jspdf';
 import * as html2canvas from 'html2canvas';
 import * as $ from 'jquery'
+import * as DecoupledEditor from '@ckeditor/ckeditor5-build-decoupled-document';
+
 
 @Component({
   selector: 'ngx-grid',
@@ -41,6 +43,7 @@ export class PlantillasComponent {
   crear: boolean;
   config: ToasterConfig;
   info_plantilla: PlantillaMinuta;
+  public Editor = DecoupledEditor;
 
   constructor(
     private contratoService: ContratoService,
@@ -142,6 +145,13 @@ export class PlantillasComponent {
         }
       });
   }
+
+  onReady( editor ) {
+    editor.ui.getEditableElement().parentElement.insertBefore(
+        editor.ui.view.toolbar.element,
+        editor.ui.getEditableElement()
+    );
+}
 
   private showToast(type: string, title: string, body: string) {
     this.config = new ToasterConfig({
