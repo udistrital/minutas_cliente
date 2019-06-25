@@ -49,6 +49,8 @@
     "@angular/platform-browser-dynamic": "6.0.0",
     "@angular/router": "6.0.0",
     "@asymmetrik/ngx-leaflet": "3.0.1",
+    "@ckeditor/ckeditor5-angular": "^1.1.0",
+    "@ckeditor/ckeditor5-build-decoupled-document": "^12.2.0",
     "@nebular/auth": "2.0.0-rc.9",
     "@nebular/security": "2.0.0-rc.9",
     "@nebular/theme": "2.0.0-rc.9",
