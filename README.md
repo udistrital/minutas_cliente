@@ -15,6 +15,10 @@ Como componentes básicos cuenta con:
  * **Nebular Components**
  * **Material Angular**
 
+### Requisitos.
+
+- NodeJs.
+- AngularCli.
 
 <details>
 <summary><h2> 🛠️ Configuracion del proyecto</h2></summary>
@@ -43,9 +47,10 @@ git clone https://github.com/udistrital/minutas_argo_cliente.git
 <details>
     Dependencias incluidas:
 
-  - **Nebular:** (https://github.com/akveo/nebular)
+  - **[Nebular](https://github.com/akveo/nebular)** 
   - **Angular 6**
   - **Bootstrap 4** 
+  - **[Material Angular](https://material.angular.io/)** 
 
   ### API MID
   - **movilidad_academica_mid:** este [api](https://github.com/udistrital/movilidad_academica_mid). se encarga de gestionar la logica de negocio relacionada con el manejo de informacion relacionada con los estudiantes/docentes entrantes y salientes.
