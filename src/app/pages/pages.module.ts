@@ -6,6 +6,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { SharedModule } from '../shared/shared.module';
 import { MenuService } from '../@core/data/menu.service';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -17,6 +18,7 @@ const PAGES_COMPONENTS = [
     ThemeModule,
     DashboardModule,
     SharedModule,
+    CKEditorModule,
   ],
   declarations: [
     ...PAGES_COMPONENTS,
