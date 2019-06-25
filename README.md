@@ -43,8 +43,9 @@ git clone https://github.com/udistrital/minutas_argo_cliente.git
       npm start
   ```
 </details>
-<summary><h2> :pick: Dependencias Utilizadas</h2></summary>
+
 <details>
+<summary><h2> :pick: Dependencias Utilizadas</h2></summary>
     Dependencias incluidas:
 
   - **[Nebular](https://github.com/akveo/nebular)** 
@@ -52,11 +53,8 @@ git clone https://github.com/udistrital/minutas_argo_cliente.git
   - **Bootstrap 4** 
   - **[Material Angular](https://material.angular.io/)** 
 
-  ### API MID
-  - **movilidad_academica_mid:** este [api](https://github.com/udistrital/movilidad_academica_mid). se encarga de gestionar la logica de negocio relacionada con el manejo de informacion relacionada con los estudiantes/docentes entrantes y salientes.
-
   ### API CRUD
-  - **movilidad_academica_crud:** este [api](https://github.com/udistrital/movilidad_academica_crud). se encarga de gestionar las tablas del esquema de .....
+  - **minutas_argo_crud:** este [api](https://github.com/udistrital/minutas_argo_crud). gestionar el CRUD de las plantillas.
 
   ### Variables de entorno
   ```typescript 
