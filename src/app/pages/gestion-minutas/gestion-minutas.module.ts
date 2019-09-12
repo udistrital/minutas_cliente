@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 
 import { ThemeModule } from '../../@theme/theme.module';
-import { CKEditorModule } from 'ng2-ckeditor';
+// import { CKEditorModule } from 'ng2-ckeditor';
 import { GestionMinutasRoutingModule } from './gestion-minutas-routing.module';
 import { GestionMinutasComponent } from './gestion-minutas.component';
 import { PlantillasComponent } from './plantillas/plantillas.component';
 import { ContratoService } from '../../@core/data/contrato.service';
 import { MinutasArgoService } from '../../@core/data/minutas_argo.service';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+
 
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 
