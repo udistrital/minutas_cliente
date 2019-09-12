@@ -9,7 +9,7 @@ pipeline:
 
   # build and test the go program
   nodejs:
-    image: node:12.6.0
+    image: node:10.0.0
     commands:
      - node --version
      - npm i
@@ -19,7 +19,7 @@ pipeline:
       event: [push, pull_request]
       
   nodejs:  
-    image: node:12.6.0
+    image: node:10.0.0
     commands:
      - node --version
      - npm i
