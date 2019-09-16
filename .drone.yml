@@ -71,3 +71,4 @@ pipeline:
       status: [success, failure]
       branch: [master, test]
       event: [push, pull_request]
+      
