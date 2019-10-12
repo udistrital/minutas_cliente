@@ -30,36 +30,17 @@ export const Config = {
         MINUTAS_ARGO_SERVICE:   'http://localhost:8080/v1/',
         CONTRATO_SERVICE: 'http://jbpm.udistritaloas.edu.co:8280/services/contratoSuscritoProxyService/',
         TOKEN: {
-            AUTORIZATION_URL: 'https://autenticacion.udistrital.edu.co:8244/authorize',
-            CLIENTE_ID: 'bpT1LDoodD1wNUTPD3I2QM_0JVYa',
+            AUTORIZATION_URL: 'https://autenticacion.portaloas.udistrital.edu.co/oauth2/authorize',
+            CLIENTE_ID: 'kGgrjShffh1rjWdxGvNodcNCO7wa',
             RESPONSE_TYPE: 'id_token token',
-            REDIRECT_URL: 'http://localhost:4200/',
+            REDIRECT_URL: 'https://pruebasminutas.portaloas.udistrital.edu.co',
             SCOPE: 'openid email role documento',
-            SIGN_OUT_URL: 'https://autenticacion.udistrital.edu.co/oidc/logout',
-            SIGN_OUT_REDIRECT_URL: 'http://localhost:4200/',
+            SIGN_OUT_URL: 'https://autenticacion.portaloas.udistrital.edu.co/oidc/logout',
+            SIGN_OUT_REDIRECT_URL: 'https://pruebasminutas.portaloas.udistrital.edu.co',
         },
 
     },
-    PREPROD_LOCAL: {
-        NUXEO: {
-            PATH: 'https://documental.udistrital.edu.co/nuxeo/',
-        },
-        WSO2_SERVICE: 'http://jbpm.udistritaloas.edu.co:8280/services',
-        PERSONA_SERVICE: '',
-        DOCUMENTO_SERVICE: '',
-        CONF_MENU_SERVICE: 'https://autenticacion.udistrital.edu.co:8244/configuracion_crud_api/v1/menu_opcion_padre/ArbolMenus/',
-        MINUTAS_ARGO_SERVICE:   'http://localhost:8080/v1/',
-        TOKEN: {
-            AUTORIZATION_URL: 'https://autenticacion.udistrital.edu.co:8244/authorize',
-            CLIENTE_ID: 'e36v1MPQk2jbz9KM4SmKhk8Cyw0a',
-            RESPONSE_TYPE: 'id_token token',
-            REDIRECT_URL: 'https://pruebascampus.portaloas.udistrital.edu.co/',
-            SCOPE: 'openid email role documento',
-            SIGN_OUT_URL: 'https://autenticacion.udistrital.edu.co/oidc/logout',
-            SIGN_OUT_REDIRECT_URL: 'https://pruebascampus.portaloas.udistrital.edu.co/',
-        },
-    },
-    PREPROD_NUBE: {
+    NUBE: {
         NUXEO: {
             PATH: 'https://documental.udistrital.edu.co/nuxeo/',
         },
@@ -70,16 +51,16 @@ export const Config = {
         MINUTAS_ARGO_SERVICE:   'http://localhost:8080/v1/',
         TOKEN: {
             AUTORIZATION_URL: 'https://autenticacion.portaloas.udistrital.edu.co/oauth2/authorize',
-            CLIENTE_ID: 'iKu3JoaAbsqLoQTpIjjFlz9RfIga',
+            CLIENTE_ID: 'e36v1MPQk2jbz9KM4SmKhk8Cyw0a',
             RESPONSE_TYPE: 'id_token token',
+            REDIRECT_URL: 'http://localhost:4200/',
             SCOPE: 'openid email role documento',
-            REDIRECT_URL: 'https://pruebascampus.portaloas.udistrital.edu.co/',
             SIGN_OUT_URL: 'https://autenticacion.portaloas.udistrital.edu.co/oidc/logout',
-            SIGN_OUT_REDIRECT_URL: 'https://pruebascampus.portaloas.udistrital.edu.co/',
+            SIGN_OUT_REDIRECT_URL: 'http://localhost:4200/',
         },
     },
 };
 
 export const GENERAL = {
-    ENTORNO: Config.LOCAL,
+    ENTORNO: Config.PRUEBAS,
 };
