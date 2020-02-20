@@ -7,7 +7,7 @@ export const Config = {
         PERSONA_SERVICE: '',
         DOCUMENTO_SERVICE: '',
         CONF_MENU_SERVICE: 'http://10.20.0.254/configuracion_api/v1/menu_opcion_padre/ArbolMenus/',
-        MINUTAS_ARGO_SERVICE:   'http://localhost:8089/v1/',
+        MINUTAS_ARGO_SERVICE:   'http://pruebasapi.intranetoas.udistrital.edu.co:8500/v1/',
         CONTRATO_SERVICE: 'http://jbpm.udistritaloas.edu.co:8280/services/contratoSuscritoProxyService/',
         TOKEN: {
             AUTORIZATION_URL: 'https://autenticacion.portaloas.udistrital.edu.co/oauth2/authorize',
@@ -27,7 +27,7 @@ export const Config = {
         PERSONA_SERVICE: '',
         DOCUMENTO_SERVICE: '',
         CONF_MENU_SERVICE: 'http://10.20.0.254/configuracion_api/v1/menu_opcion_padre/ArbolMenus/',
-        MINUTAS_ARGO_SERVICE:   'http://localhost:8080/v1/',
+        MINUTAS_ARGO_SERVICE:   'https://autenticacion.portaloas.udistrital.edu.co/apioas/minutas_crud/v1/',
         CONTRATO_SERVICE: 'http://jbpm.udistritaloas.edu.co:8280/services/contratoSuscritoProxyService/',
         TOKEN: {
             AUTORIZATION_URL: 'https://autenticacion.portaloas.udistrital.edu.co/oauth2/authorize',
@@ -62,5 +62,5 @@ export const Config = {
 };
 
 export const GENERAL = {
-    ENTORNO: Config.PRUEBAS,
+    ENTORNO: Config.LOCAL,
 };
