@@ -38,7 +38,7 @@ steps:
         from_secret: aws_secret_access_key
       region: us-east-1
       source: dist/**/*
-      target: /${DRONE_REPO_NAME}
+      target: /pruebas${DRONE_REPO_NAME%%_cliente}.portaloas.udistrital.edu.co
       strip_prefix: dist/
     when:
       branch:
