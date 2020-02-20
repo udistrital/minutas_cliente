@@ -8,8 +8,8 @@ export const Config = {
         DOCUMENTO_SERVICE: '',
         CONF_MENU_SERVICE: 'http://10.20.0.254/configuracion_api/v1/menu_opcion_padre/ArbolMenus/',
         MINUTAS_ARGO_SERVICE:   'http://pruebasapi.intranetoas.udistrital.edu.co:8500/v1/',
-        CONTRATO_SERVICE: 'https://autenticacion.portaloas.udistrital.edu.co/apioas/administrativa_jbpm/v2/',
-        // CONTRATO_SERVICE: 'http://jbpm.udistritaloas.edu.co:8280/services/contratoSuscritoProxyService/',
+        // CONTRATO_SERVICE: 'https://autenticacion.portaloas.udistrital.edu.co/apioas/administrativa_jbpm/v2/',
+        CONTRATO_SERVICE: 'http://jbpm.udistritaloas.edu.co:8280/services/contratoSuscritoProxyService/',
         TOKEN: {
             AUTORIZATION_URL: 'https://autenticacion.portaloas.udistrital.edu.co/oauth2/authorize',
             CLIENTE_ID: 'e36v1MPQk2jbz9KM4SmKhk8Cyw0a',
@@ -29,7 +29,8 @@ export const Config = {
         DOCUMENTO_SERVICE: '',
         CONF_MENU_SERVICE: 'http://10.20.0.254/configuracion_api/v1/menu_opcion_padre/ArbolMenus/',
         MINUTAS_ARGO_SERVICE:   'https://autenticacion.portaloas.udistrital.edu.co/apioas/minutas_crud/v1/',
-        CONTRATO_SERVICE: 'http://jbpm.udistritaloas.edu.co:8280/services/contratoSuscritoProxyService/',
+        CONTRATO_SERVICE: 'https://autenticacion.portaloas.udistrital.edu.co/apioas/administrativa_jbpm/v2/',
+        // CONTRATO_SERVICE: 'http://jbpm.udistritaloas.edu.co:8280/services/contratoSuscritoProxyService/',
         TOKEN: {
             AUTORIZATION_URL: 'https://autenticacion.portaloas.udistrital.edu.co/oauth2/authorize',
             CLIENTE_ID: 'kGgrjShffh1rjWdxGvNodcNCO7wa',
